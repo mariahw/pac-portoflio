@@ -3,6 +3,8 @@ import { Switch, Route, Link } from 'react-router-dom'
 
 import GameBoard from '../../gameBoard/components/GameBoard.js'
 
+import '../../../common/Styles/main.css';
+
 const Home = () => (
 
   <div id="main-menu">
