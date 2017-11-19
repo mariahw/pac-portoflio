@@ -1,0 +1,57 @@
+html, body, div, section, h1, h2, h3, h4, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, .full {
+	height: 100%;
+	width: 100%;
+}
+
+html, body {
+	overflow: hidden;
+}
+
+.absmid {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	margin: auto;
+}
+
+.al-left {
+	text-align: left;
+}
+
+.al-right {
+	text-align: right;
+}
+
+.cntr {
+	text-align: center;
+}
+
+
+.hlf {
+	width: 50%;
+	display: inline-block;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.unlock {
+	overflow-y: scroll;
+}
+
+.padd {
+	padding-top: 10px;
+}
+
+    					
+.clear {
+    display: none;
+    z-index: -10;
+    opacity: 0.00;
+    visibility: hidden;
+}
