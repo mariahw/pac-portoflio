@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
 
 import GameBoard from '../../gameBoard/components/GameBoard.js'
+import Intro from '../../intro/components/IntroRender.js'
 
 // import '../../../common/Styles/main.css';
 
@@ -15,7 +16,7 @@ const Home = () => (
 
           <ul id="int-main-menu">
               <li class="btn" id="lvl-1-start">
-                  <Link to="/play"><h3>Play</h3></Link>
+                  <Link to="/intro"><h3>Play</h3></Link>
               </li>
               <li class="btn" id="contact">
                   <a href="mailto:mariahweathersby@gmail.com"><h3>Contact</h3></a>
