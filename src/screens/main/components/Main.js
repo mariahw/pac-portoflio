@@ -8,7 +8,7 @@ import Intro from '../../intro/components/IntroContainer.js'
 const Main = () => (
 
   <div id="game-container" class="full lock">
-      <span id="desk-container">
+      <span id="desk-container" class="active">
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/play' component={GameBoard}/>
@@ -16,7 +16,7 @@ const Main = () => (
         </Switch>
       </span>
   </div>
-  
+
 )
 
 export default Main;
