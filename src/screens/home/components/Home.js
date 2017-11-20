@@ -10,10 +10,12 @@ const Home = () => (
 
     <div id="intro">
 
+      {/*
       <Switch>
-        <Route exact path='/' component={MainMenu}/>
+        <Route exact path='/home' component={MainMenu}/>
         <Route path='/intro' component={Intro}/>
       </Switch>
+      */}
 
     </div>
 
