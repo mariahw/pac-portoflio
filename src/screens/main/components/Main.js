@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import Home from '../../home/components/Home.js'
 import GameBoard from '../../gameBoard/components/GameBoard.js'
-import Intro from '../../intro/components/IntroRender.js'
+import Intro from '../../intro/components/IntroContainer.js'
 
 const Main = () => (
   <main>
