@@ -1,3 +1,3 @@
-import GameBoard from './GameBoard.js'
+import GameBoard from './GameBoardContainer.js'
 
 export { GameBoard }
