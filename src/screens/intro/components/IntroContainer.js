@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import IntroRender from './IntroRender.js'
 
-class IntroContainer extends React.Component {
+class IntroContainer extends Component {
 
   constructor() {
     super();

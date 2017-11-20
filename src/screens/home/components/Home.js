@@ -1,10 +1,5 @@
-import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
-
-import GameBoard from '../../gameBoard/components/GameBoard.js'
-import Intro from '../../intro/components/IntroContainer.js'
-
-// import '../../../common/Styles/main.css';
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Home = () => (
 
