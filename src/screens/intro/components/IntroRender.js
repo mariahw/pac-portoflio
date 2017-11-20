@@ -1,11 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const IntroRender = (props) => (
+import introvid from '../assets/intro.mp4'
 
-    <div>
-      <Link to="/play"><h2>click to start! { props.introEnd } </h2></Link>
-    </div>
+const IntroRender = ( props ) => (
+
+  <div id="vidWrapper">
+
+      <video id="introVid" autoPlay muted
+        onEnded={ props.introEnd }
+      >
+        <source src={introvid} type="video/mp4" />
+        Your browser does not support the video tag.
+
+      </video>
+
+      { props.introState ?
+        <Link to="/play">
+          <div className="btn flash"><h3>click to start!</h3></div>
+        </Link> : null
+      }
+
+  </div>
+
 
 );
 

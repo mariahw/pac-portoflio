@@ -10,9 +10,8 @@ const Main = () => (
   <div id="game-container" class="full lock">
       <span id="desk-container" class="active">
         <Switch>
-          <Route exact path='/' component={Home}/>
+          <Route path='/' component={Home}/>
           <Route path='/play' component={GameBoard}/>
-          <Route path='/intro' component={Intro}/>
         </Switch>
       </span>
   </div>

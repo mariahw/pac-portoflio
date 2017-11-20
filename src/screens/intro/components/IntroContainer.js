@@ -4,17 +4,24 @@ import IntroRender from './IntroRender.js'
 
 class IntroContainer extends Component {
 
-  constructor() {
-    super();
-    this.state = { introEnd: "false" };
+  constructor(props) {
+    super(props);
+    this.state = { introEnd: false };
+
+    this.onIntroEnd = this.onIntroEnd.bind(this)
   }
 
-  componentDidMount() {
-    console.log("VIDEO PLAY")
+  onIntroEnd() {
+    this.setState( { introEnd: true } )
   }
 
   render() {
-    return <IntroRender introEnd = {this.state.introEnd} />
+    return (
+      <IntroRender
+        introEnd = { this.onIntroEnd }
+        introState = { this.state.introEnd }
+      />
+    )
   }
 }
 
