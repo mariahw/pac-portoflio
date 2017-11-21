@@ -5,6 +5,10 @@ import introvid from '../assets/intro.mp4'
 
 const IntroRender = ( props ) => (
 
+  <div id="intro-viewport" >
+
+    <div id="intro">
+
   <div id="vidWrapper">
 
       <video id="introVid" autoPlay muted
@@ -16,12 +20,16 @@ const IntroRender = ( props ) => (
       </video>
 
       { props.introState ?
-        <Link to="/play">
+        < Link onClick={ props.onLetsPlay } to="/play" >
           <div className="btn flash"><h3>click to start!</h3></div>
         </Link> : null
       }
 
   </div>
+
+</div>
+
+</div>
 
 
 );

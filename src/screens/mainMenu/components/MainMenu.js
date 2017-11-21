@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 
 const MainMenu = () => (
 
+  <div id="intro-viewport" >
+
+    <div id="intro">
+
   <div id="main-menu">
 
       <div id="menu-wrapper" class="dotted absmid">
@@ -29,6 +33,10 @@ const MainMenu = () => (
 
       </div>
 
+  </div>
+
+  </div>
+  
   </div>
 
 )

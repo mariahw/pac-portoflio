@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux'
+import {connect} from 'react-redux'
+// import * as actions from  '../actions'
+import * as helperActions from  '../../../common/HelperModal/actions'
+
 
 import IntroRender from './IntroRender.js'
 
@@ -9,10 +14,20 @@ class IntroContainer extends Component {
     this.state = { introEnd: false };
 
     this.onIntroEnd = this.onIntroEnd.bind(this)
+    this.onLetsPlay = this.onLetsPlay.bind(this)
+  }
+
+  componentDidMount() {
+    console.log("INTRO LOG", this)
   }
 
   onIntroEnd() {
     this.setState( { introEnd: true } )
+  }
+
+  onLetsPlay() {
+    console.log("PLAY")
+    this.props.actions.activateHelper()
   }
 
   render() {
@@ -20,9 +35,25 @@ class IntroContainer extends Component {
       <IntroRender
         introEnd = { this.onIntroEnd }
         introState = { this.state.introEnd }
+        onLetsPlay = {this.state.onLetsPlay}
       />
     )
   }
 }
 
-export default IntroContainer;
+// export default IntroContainer;
+
+function mapStateToProps(state){
+  return {
+    activateHelper: state.helperModal.active
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  const actionsToBind = Object.assign({}, helperActions);
+  return {
+    actions: bindActionCreators(actionsToBind, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(IntroContainer);

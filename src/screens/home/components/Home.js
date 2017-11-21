@@ -10,12 +10,12 @@ const Home = () => (
 
     <div id="intro">
 
-      {/*
-      <Switch>
-        <Route exact path='/home' component={MainMenu}/>
-        <Route path='/intro' component={Intro}/>
-      </Switch>
-      */}
+    // {/*
+    // <Switch>
+    //   <Route exact path='/home' component={MainMenu}/>
+    //   <Route path='/intro' component={Intro}/>
+    // </Switch>
+    // */}
 
     </div>
 
@@ -24,3 +24,10 @@ const Home = () => (
 )
 
 export default Home;
+
+// {/*
+// <Switch>
+//   <Route exact path='/home' component={MainMenu}/>
+//   <Route path='/intro' component={Intro}/>
+// </Switch>
+// */}
