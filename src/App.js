@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Main from './screens/main/components/Main.js';
 
 import './App.css';
