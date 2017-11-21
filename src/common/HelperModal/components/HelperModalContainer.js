@@ -14,8 +14,8 @@ import * as actions from  '../actions'
 
 class HelperModalContainer extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.prevModal = this.prevModal.bind(this)
     this.nxtModal = this.nxtModal.bind(this)
@@ -41,10 +41,10 @@ class HelperModalContainer extends Component {
   render() {
     return (
       <HelperModalRender
-        // active = {this.state.slideActive}
-        // currentSlide = {this.state.currentSlide}
-        // prevModal = {this.prevModal}
-        // nxtModal = {this.nxtModal}
+        active = {this.props.active}
+        currentSlide = {this.props.currentSlide}
+        prevModal = {this.prevModal}
+        nxtModal = {this.nxtModal}
       />
     )
   }

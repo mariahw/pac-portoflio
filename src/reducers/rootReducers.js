@@ -1,9 +1,10 @@
+import {combineReducers} from "redux"
+// import reducer from './rootReducers'
 
-export default function(){
-  return (
-    {
-      currentslide: 0,
-      active: false
-    }
-  )
-}
+import helperModal from '../common/HelperModal';
+
+const allReducers = combineReducers({
+  helperModal: helperModal.reducer
+});
+
+export default allReducers;
