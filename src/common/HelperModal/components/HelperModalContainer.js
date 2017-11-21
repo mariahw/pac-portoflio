@@ -1,12 +1,15 @@
-import React, { Component, bindActionCreators } from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Link,
   Route,
   Switch,
 } from 'react-router-dom';
+import { bindActionCreators } from 'redux'
 import {connect} from 'react-redux'
 import HelperModalRender from './HelperModalRender.js'
+import * as actions from  '../actions'
+
 
 
 class HelperModalContainer extends Component {
@@ -50,9 +53,16 @@ class HelperModalContainer extends Component {
 
 function mapStateToProps(state){
   return {
-    testing: state.test.currentslide,
-    state: state
+    currentSlide: state.helperModal.currentslide,
+    active: state.helperModal.active
   }
 }
 
-export default connect(mapStateToProps)(HelperModalContainer);
+const mapDispatchToProps = (dispatch) => {
+  const actionsToBind = Object.assign({}, actions);
+  return {
+    actions: bindActionCreators(actionsToBind, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HelperModalContainer);
