@@ -15,6 +15,7 @@ class IntroContainer extends Component {
 
     this.onIntroEnd = this.onIntroEnd.bind(this)
     this.onLetsPlay = this.onLetsPlay.bind(this)
+    this.activateHelper = this.activateHelper.bind(this)
   }
 
   componentDidMount() {
@@ -25,8 +26,12 @@ class IntroContainer extends Component {
     this.setState( { introEnd: true } )
   }
 
+  activateHelper(){
+    this.props.actions.activateHelper()
+    console.log(this)
+  }
+
   onLetsPlay() {
-    console.log("PLAY")
     this.props.actions.activateHelper()
   }
 
@@ -36,6 +41,7 @@ class IntroContainer extends Component {
         introEnd = { this.onIntroEnd }
         introState = { this.state.introEnd }
         onLetsPlay = {this.state.onLetsPlay}
+        activateHelper = {this.activateHelper}
       />
     )
   }

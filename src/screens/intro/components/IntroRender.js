@@ -20,7 +20,7 @@ const IntroRender = ( props ) => (
       </video>
 
       { props.introState ?
-        < Link onClick={ props.onLetsPlay } to="/play" >
+        <Link onClick={ props.activateHelper } to="/play" >
           <div className="btn flash"><h3>click to start!</h3></div>
         </Link> : null
       }
