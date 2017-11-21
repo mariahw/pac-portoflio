@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Helper from '../../../common/HelperModal/components/HelperModalContainer.js'
+
 const GameBoardRender = () => (
 
   <div id="maze-container" class="full active">
