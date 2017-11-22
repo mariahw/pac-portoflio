@@ -27,15 +27,15 @@ class HelperModalContainer extends Component {
   }
 
   prevModal(){
-    var currentSlide = this.state.currentSlide
+    var currentSlide = this.props.currentSlide
     if (currentSlide > 0)
-      this.setState({ currentSlide: currentSlide-=1 })
+      this.props.actions.updateCurrSlide(currentSlide-=1)
   }
 
   nxtModal(){
-    var currentSlide = this.state.currentSlide
+    var currentSlide = this.props.currentSlide
     if (currentSlide < 4)
-      this.setState({ currentSlide: currentSlide+=1 })
+      this.props.actions.updateCurrSlide(currentSlide+=1)
   }
 
   render() {
@@ -53,7 +53,7 @@ class HelperModalContainer extends Component {
 
 function mapStateToProps(state){
   return {
-    currentSlide: state.helperModal.currentslide,
+    currentSlide: state.helperModal.currentSlide,
     active: state.helperModal.active
   }
 }

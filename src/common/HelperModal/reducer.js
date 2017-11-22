@@ -2,7 +2,7 @@ import * as types from './actionTypes';
 import * as constants from './constants';
 
 const initialState = {
-  currentslide: 0,
+  currentSlide: 0,
   active: false
 }
 
@@ -10,7 +10,6 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
 
     case types.ACTIVATE_HELPER:
-      console.log("ACTIVATE HELPER")
       return Object.assign({}, state, { active: action.payload });
       break;
 
@@ -19,6 +18,8 @@ export default function reducer(state = initialState, action) {
       break;
 
     case types.UPDATE_HELPER_SLIDE:
+      console.log("UPDATE_HELPER_SLIDE", action.payload, )
+
       return Object.assign({}, state, { currentSlide: action.payload })
       break;
 
