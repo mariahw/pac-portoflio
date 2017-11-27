@@ -1,5 +1,3 @@
 # Retro Resume
-### Pacman play-through
-Pacman style resume update - IP
-
-ReactJS + Assistant plugins
+### Pacman play-through - IP 
+Pacman style resume update(ReactJS + Assistant plugins)
